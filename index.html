@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Internship Board</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Internship Board</h1>
+        <p>Find internships based on your skills and interests.</p>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Search and Filter -->
+        <section class="filters" aria-label="Internship search and filters">
+
+            <div>
+                <label for="search">Search Internships</label>
+
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Search by title or company"
+                >
+            </div>
+
+
+            <div>
+                <label for="domain">Select Domain</label>
+
+                <select id="domain">
+
+                    <option value="all">
+                        All Domains
+                    </option>
+
+                    <option value="web">
+                        Web Development
+                    </option>
+
+                    <option value="python">
+                        Python
+                    </option>
+
+                    <option value="data">
+                        Data Science
+                    </option>
+
+                    <option value="iot">
+                        IoT
+                    </option>
+
+                </select>
+            </div>
+
+        </section>
+
+
+        <!-- Result Count -->
+        <p id="resultCount"></p>
+
+
+        <!-- Internship Cards -->
+        <section
+            id="internshipList"
+            class="internship-list"
+            aria-live="polite">
+        </section>
+
+
+        <!-- Empty State -->
+        <p id="emptyMessage" hidden>
+            No internships found.
+            Try another search or domain.
+        </p>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
